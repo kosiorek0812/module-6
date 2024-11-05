@@ -18,6 +18,7 @@ public class GetAverage implements ArrayOperations{
                 .getAsDouble();
 
     }
+    @Override
     public double getAverageWithIntStream(int[] numbers) {
         List<Integer> numbersToList = Arrays.stream(numbers).boxed().toList();
 
@@ -26,6 +27,7 @@ public class GetAverage implements ArrayOperations{
                 .average()
                 .getAsDouble();
     }
+    @Override
     public void display(int[] numbers) {
         List<Integer> numbersToList = Arrays.stream(numbers).boxed().toList();
 
