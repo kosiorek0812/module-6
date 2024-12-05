@@ -19,6 +19,17 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kodilla-exception-2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/kodilla-exception-2" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kodilla-exception/kodilla-exception" />
+      </GradleProjectSettings>
     </option>
   </component>
 </project>
