@@ -1,7 +1,5 @@
 package com.kodilla.stream.array;
 
-import com.kodilla.stream.array.ArrayOperations;
-import com.kodilla.stream.array.GetAverage;
 import org.junit.jupiter.api.Test;
 import java.util.Random;
 import org.junit.jupiter.api.*;
@@ -14,7 +12,6 @@ public class ArrayOperationsTestSuite {
     void testArrayOperationsRandom() {
         //Given
         final int ARRAY_LENGTH = 5;
-        GetAverage testGetAverage = new GetAverage();
 
         //When
 
@@ -28,23 +25,22 @@ public class ArrayOperationsTestSuite {
         double testAverage = (double) sum / (double) exampleArrayOfInt.length;
 
         //Then
-        Assertions.assertEquals(testAverage, testGetAverage.getAverageWithoutIntStream(exampleArrayOfInt));
-        Assertions.assertEquals(testAverage, testGetAverage.getAverageWithIntStream(exampleArrayOfInt));
+        Assertions.assertEquals(testAverage, ArrayOperations.getAverage(exampleArrayOfInt));
+
 
     }
     @Test
     void testArrayOperations() {
-        GetAverage testGetAverage = new GetAverage();
         int[] exampleArrayOfInt = {1, 2, 3, 4, 5, 6, 7};
         double testAverage = (1.0 + 2.0 + 3.0 + 4.0 + 5.0 + 6.0 + 7.0) / 7.0;
-        Assertions.assertEquals(testAverage, testGetAverage.getAverageWithoutIntStream(exampleArrayOfInt));
-        Assertions.assertEquals(testAverage, testGetAverage.getAverageWithIntStream(exampleArrayOfInt));
+        Assertions.assertEquals(testAverage, ArrayOperations.getAverage(exampleArrayOfInt));
+
     }
     @Test
     void testDisplay() {
-        GetAverage testGetAverage = new GetAverage();
         int[] exampleArrayOfInt = {1, 2, 3, 4, 5, 6, 7};
-        testGetAverage.display(exampleArrayOfInt);
+        ArrayOperations.getAverage(exampleArrayOfInt);
+
     }
 
 
