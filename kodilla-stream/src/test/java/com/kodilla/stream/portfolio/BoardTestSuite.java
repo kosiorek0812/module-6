@@ -5,11 +5,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.util.stream.*;
+
 import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class BoardTestSuite {
+class BoardTestSuite {
 
     @Test
     void testAddTaskList() {
@@ -147,11 +147,15 @@ public class BoardTestSuite {
         //When
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
-
-        double averageWorkingOnTask = project.getTaskLists().stream()
+        var average = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
                 .map(Task::getCreated)
+                .map(d -> d.until(LocalDate.now()).getDays())
+                .mapToInt(d -> d)
                 .average();
+
+        //Then
+        assertEquals(10.0, average.getAsDouble());
     }
 }
