@@ -1,5 +1,6 @@
 package com.kodillaexception2;
 
+import com.kodilla.exception.test.ExceptionHandling;
 import com.kodilla.exception.test.SecondChallenge;
 import com.kodilla.exception.test.WrongArgumentException;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,15 +10,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class SecondChallengeTestSuite {
 
-
-
-
     @Test
     void testPositivePath() {
-        SecondChallenge challenge = new SecondChallenge();
+        ExceptionHandling exceptionHandling = new ExceptionHandling();
 
-        assertDoesNotThrow(() -> challenge.probablyIWillThrowException(1.99, 1.49));
-        assertDoesNotThrow(() -> challenge.probablyIWillThrowException(1.0, 1.51));
+        assertDoesNotThrow(() -> exceptionHandling.handleException(1.99, 1.49));
+        assertDoesNotThrow(() -> exceptionHandling.handleException(1.0, 1.51));
 
 
 
@@ -25,9 +23,10 @@ public class SecondChallengeTestSuite {
 
     @Test
     void testNegativePath() {
-        SecondChallenge challenge = new SecondChallenge();
-         assertThrows(WrongArgumentException.class, () -> challenge.probablyIWillThrowException(2, 1.5));
-         assertThrows(WrongArgumentException.class, () -> challenge.probablyIWillThrowException(2.01, 1.5));
+        ExceptionHandling exceptionHandling = new ExceptionHandling();
+
+         assertThrows(WrongArgumentException.class, () -> exceptionHandling.handleException(2, 1.5));
+         assertThrows(WrongArgumentException.class, () -> exceptionHandling.handleException(2.01, 1.5));
 
     }
 
