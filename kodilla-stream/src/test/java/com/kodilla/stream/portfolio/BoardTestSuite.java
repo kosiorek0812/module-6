@@ -145,10 +145,11 @@ class BoardTestSuite {
         Board project = prepareTestData();
 
         //When
-        List<TaskList> inProgressTasks = new ArrayList<>();
-        inProgressTasks.add(new TaskList("In progress"));
+//        List<TaskList> inProgressTasks = new ArrayList<>();
+//        inProgressTasks.add(new TaskList("In progress"));
+
         var average = project.getTaskLists().stream()
-                .filter(inProgressTasks::contains)
+                .filter(t -> t.getName().equals("In progress"))
                 .flatMap(tl -> tl.getTasks().stream())
                 .map(Task::getCreated)
                 .map(d -> d.until(LocalDate.now()).getDays())
