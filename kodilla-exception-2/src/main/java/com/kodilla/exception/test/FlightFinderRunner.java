@@ -14,7 +14,8 @@ public class FlightFinderRunner {
         Flight f5 = new Flight("Warsaw", "Berlin");
         Flight f6 = new Flight("Warsaw", "Madrid");
         Flight f7 = new Flight("Warsaw", "Nairobi");
-        Flight f8 = new Flight("Warsaw", "london");
+        Flight f8 = new Flight("Warsaw", "London");
+        Flight f9 = new Flight("Warsaw", "New York");
 
         List<Flight> flights = new LinkedList<>();
         flights.add(f1);

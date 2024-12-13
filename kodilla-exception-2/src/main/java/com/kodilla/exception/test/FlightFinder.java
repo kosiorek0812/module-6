@@ -20,7 +20,7 @@ public class FlightFinder {
 
     }
     public Flight findFlight(Flight flight) throws RouteNotFoundException {
-        if (destinationReachibilities.get(flight.getArrivalAirport()) == false) {
+        if ((destinationReachibilities.get(flight.getArrivalAirport()) == null) || (destinationReachibilities.get(flight.getDepartureAirport()) == false)) {
             throw new RouteNotFoundException("Route not found");
         } else {
             return flight;
