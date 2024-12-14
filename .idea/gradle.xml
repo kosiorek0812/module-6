@@ -30,6 +30,14 @@
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/kodilla-exception/kodilla-exception" />
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kodilla-good-patterns" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/kodilla-good-patterns" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>
