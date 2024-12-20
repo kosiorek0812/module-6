@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/kodilla-spring" />
+            <option value="$PROJECT_DIR$/kodilla-spring-web" />
             <option value="$PROJECT_DIR$/kodilla-stream" />
             <option value="$PROJECT_DIR$/module1" />
             <option value="$PROJECT_DIR$/module2" />
@@ -17,6 +18,14 @@
             <option value="$PROJECT_DIR$/src" />
             <option value="$PROJECT_DIR$/src/main" />
             <option value="$PROJECT_DIR$/src/main/testing" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kodilla-design-patterns" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/kodilla-design-patterns" />
           </set>
         </option>
       </GradleProjectSettings>
