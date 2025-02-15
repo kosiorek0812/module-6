@@ -12,14 +12,14 @@ public class BoardConfig {
     }
     @Bean(name = "toDoList")
     public TaskList toDoList() {
-        return new TaskList();
+        return new TaskList("toDoList");
     }
     @Bean(name = "doneList")
     public TaskList doneList() {
-        return new TaskList();
+        return new TaskList("doneList");
     }
     @Bean(name = "inProgressList")
     public TaskList inProgressList() {
-        return new TaskList();
+        return new TaskList("inProgressList");
     }
 }

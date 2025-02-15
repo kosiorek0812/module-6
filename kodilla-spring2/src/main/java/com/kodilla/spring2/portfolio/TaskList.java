@@ -8,10 +8,12 @@ import java.util.List;
 
 public class TaskList {
     private List<String> tasks;
+    private String name;
 
 
-    public TaskList() {
+    public TaskList(String name) {
         this.tasks = new ArrayList<>();
+        this.name = name;
     }
     public void addTask(String task) {
         tasks.add(task);
