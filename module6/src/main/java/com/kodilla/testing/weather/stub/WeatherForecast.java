@@ -32,7 +32,7 @@ public class WeatherForecast {
         return temperatures.getTemperatures().values().stream().mapToDouble(aDouble -> aDouble).average().orElse(0);
     }
     public Double findMedian() {
-        List valueList = new ArrayList<String>();
+        List<Double> valueList = new ArrayList<>();
         valueList.addAll(temperatures.getTemperatures().values());
         valueList.sort(Comparator.naturalOrder());
 
